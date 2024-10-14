@@ -1,39 +1,36 @@
-
-
-/* General styling */
 body {
-    font-family: 'Times New Roman', Times, serif; /* Font style for the page */
-    text-align: center; /* Center text  */
-    background-color: #f9f9f9d6; /* Light gray background  */
+    font-family: Arial, sans-serif; /* font style*/
+    text-align: center; /* Center text*/
+    background-color: #f9f9f9; /* Light gray background for overall page consistency */
 }
 
 /* Header styling */
 header {
-    display: flex; /* Use flexbox to align elements within the header */
+    display: flex; /*Align elements within the header */
     align-items: center; /* Vertically align to the center */
     justify-content: center; /* Horizontally center */
-    padding: 10px; /* Add some padding for space inside the header */
+    padding: 10px; /*Padd for inside the header */
     background-color: #f4f4f4; /* Light gray color for the header background */
-    box-shadow: 0 4px 2px -2px gray; /* Add a subtle shadow below the header for depth */
+    box-shadow: 0 4px 2px -2px gray; /* Add a shadow below the header */
 }
 
 header img {
-    width: 150px; /* Set a specific width for the logo image */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 20px; /* Add space between logo and the title */
+    width: 150px; /*logo width */
+    height: auto; /* Maintains ratio */
+    margin-right: 20px; /* space between logo and the title */
 }
 
 h1 {
-    font-size: 36px; /* Set the font size for the main header */
-    font-weight: bold; /* Make the title bold */
-    color: #333; /* Dark gray color for the title */
+    font-size: 36px; /* font size for the main header */
+    font-weight: bold; /*title bold */
+    color: #333; /* color for the title */
 }
 
-/* Navigation bar styling */
+
 nav {
-    display: flex; /* Use flexbox to align navigation links */
-    justify-content: center; /* Center the navigation links */
-    margin: 20px 0; /* Add vertical space around the navigation */
+    display: flex; /* Use flexbox to align nav */
+    justify-content: center; /* Center the nav  */
+    margin: 20px 0; /* vertical space around the nav */
 }
 
 nav a {
@@ -47,19 +44,18 @@ nav a:hover {
     color: gray; /* Change link color to gray on hover */
 }
 
-/* Main content styling */
+
 .main-image {
     width: 80%; /* Set image width to 80% of its container */
-    max-width: 600px; /* Ensure the image does not exceed 600px width */
+    max-width: 600px; /*image does not exceed 600px width */
     height: auto; /* Maintain aspect ratio */
     margin: 20px auto; /* Center the image and add vertical spacing */
 }
 
-/* Pagination styling */
 .pagination {
     display: flex; /* Use flexbox for pagination dots */
     justify-content: center; /* Center the pagination dots */
-    margin-top: 10px; /* Add space above the pagination dots */
+    margin-top: 10px; /* space above the pagination dots */
 }
 
 .pagination div {
@@ -76,7 +72,6 @@ nav a:hover {
     background-color: black; /* Set active dot color to black */
 }
 
-/* Description section styling */
 .description {
     width: 80%; /* Set width of the description block */
     margin: 20px auto; /* Center the description and add vertical spacing */
@@ -85,7 +80,6 @@ nav a:hover {
     color: #333; /* Set text color to dark gray */
 }
 
-/* Table styling */
 table {
     width: 100%; /* Make tables take up full width of their container */
     border-collapse: collapse; /* Collapse borders for cleaner look */
@@ -103,7 +97,36 @@ th {
     font-weight: bold; /* Make header row text bold */
 }
 
-/* Box Model Example */
+form {
+    width: 80%; /* Set width of the form */
+    margin: 20px auto; /* Center the form and add vertical spacing */
+    padding: 20px; /* Add padding for spacing within the form */
+    background-color: #f9f9f9; /* Light gray background for the form */
+    border: 1px solid #ccc; /* Light gray border around the form */
+    border-radius: 8px; /* Rounded corners for the form */
+}
+
+input[type="email"] {
+    width: 80%; /* Set width for email input */
+    padding: 10px; /* Add padding inside the input */
+    margin: 10px 0; /* Add margin for spacing */
+    border: 1px solid #ddd; /* Light border for input */
+    border-radius: 4px; /* Rounded corners for input */
+}
+
+input[type="submit"] {
+    padding: 10px 20px; /* Set padding for submit button */
+    background-color: #333; /* Set background color for submit button */
+    color: #fff; /* Set text color to white */
+    border: none; /* Remove border from submit button */
+    border-radius: 4px; /* Rounded corners for button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+input[type="submit"]:hover {
+    background-color: #555; /* Darken the button color on hover */
+}
+
 .container-box {
     width: 80%; /* Set width for container */
     margin: 20px auto; /* Center the container and add vertical spacing */
