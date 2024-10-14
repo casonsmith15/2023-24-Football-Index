@@ -1,0 +1,114 @@
+
+
+/* General styling */
+body {
+    font-family: 'Times New Roman', Times, serif; /* Font style for the page */
+    text-align: center; /* Center text  */
+    background-color: #f9f9f9d6; /* Light gray background  */
+}
+
+/* Header styling */
+header {
+    display: flex; /* Use flexbox to align elements within the header */
+    align-items: center; /* Vertically align to the center */
+    justify-content: center; /* Horizontally center */
+    padding: 10px; /* Add some padding for space inside the header */
+    background-color: #f4f4f4; /* Light gray color for the header background */
+    box-shadow: 0 4px 2px -2px gray; /* Add a subtle shadow below the header for depth */
+}
+
+header img {
+    width: 150px; /* Set a specific width for the logo image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Add space between logo and the title */
+}
+
+h1 {
+    font-size: 36px; /* Set the font size for the main header */
+    font-weight: bold; /* Make the title bold */
+    color: #333; /* Dark gray color for the title */
+}
+
+/* Navigation bar styling */
+nav {
+    display: flex; /* Use flexbox to align navigation links */
+    justify-content: center; /* Center the navigation links */
+    margin: 20px 0; /* Add vertical space around the navigation */
+}
+
+nav a {
+    margin: 0 20px; /* Add space between navigation links */
+    font-size: 18px; /* Set font size for navigation links */
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Set text color to black */
+}
+
+nav a:hover {
+    color: gray; /* Change link color to gray on hover */
+}
+
+/* Main content styling */
+.main-image {
+    width: 80%; /* Set image width to 80% of its container */
+    max-width: 600px; /* Ensure the image does not exceed 600px width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px auto; /* Center the image and add vertical spacing */
+}
+
+/* Pagination styling */
+.pagination {
+    display: flex; /* Use flexbox for pagination dots */
+    justify-content: center; /* Center the pagination dots */
+    margin-top: 10px; /* Add space above the pagination dots */
+}
+
+.pagination div {
+    height: 20px; /* Set height of each dot */
+    width: 20px; /* Set width of each dot */
+    border-radius: 50%; /* Make the dots circular */
+    background-color: #fff; /* Set background color to white */
+    border: 2px solid black; /* Add a black border around each dot */
+    margin: 0 5px; /* Add space between dots */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.pagination div.active {
+    background-color: black; /* Set active dot color to black */
+}
+
+/* Description section styling */
+.description {
+    width: 80%; /* Set width of the description block */
+    margin: 20px auto; /* Center the description and add vertical spacing */
+    font-size: 16px; /* Set the font size for the description text */
+    line-height: 1.5; /* Set line height for better readability */
+    color: #333; /* Set text color to dark gray */
+}
+
+/* Table styling */
+table {
+    width: 100%; /* Make tables take up full width of their container */
+    border-collapse: collapse; /* Collapse borders for cleaner look */
+    margin: 20px 0; /* Add vertical spacing above and below tables */
+}
+
+td, th {
+    border: 1px solid #ddd; /* Add light border to cells */
+    padding: 10px; /* Add padding inside cells for spacing */
+    text-align: center; /* Center align text within cells */
+}
+
+th {
+    background-color: #f4f4f4; /* Set header row background color */
+    font-weight: bold; /* Make header row text bold */
+}
+
+/* Box Model Example */
+.container-box {
+    width: 80%; /* Set width for container */
+    margin: 20px auto; /* Center the container and add vertical spacing */
+    padding: 20px; /* Add padding inside the container for space */
+    border: 2px solid #333; /* Add a dark gray border */
+    background-color: #f9f9f9; /* Light gray background inside the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+}
