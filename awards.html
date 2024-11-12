@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023-2024 Football Awards</title>
+    <link rel="stylesheet" href="football_style.css"> <!-- Link to your main CSS file -->
+    <style>
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f5;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+    
+        .slide {
+            display: none;
+            width: 90%;
+            max-width: 1200px;
+            height: 80vh;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 20px;
+        }
+    
+        .slide h2 {
+            font-size: 2.8em;
+            margin: 0 0 20px 0;
+            text-align: center;
+            color: #333;
+        }
+    
+        .details-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center; /* Center aligns the image with the stats vertically */
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    
+        .player-image {
+            flex: 0 0 40%; /* Adjusts image width to 40% of the container */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-right: 20px;
+        }
+    
+        .player-image img {
+            width: 100%;
+            max-width: 350px; /* Larger max width */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    
+        .details {
+            flex: 1;
+            text-align: left;
+            padding: 20px;
+            background-color: #f9f9fc;
+            border-radius: 8px;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+    
+        .details h3 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+    
+        .details p {
+            font-size: 1.4em;
+            line-height: 1.8;
+            margin: 10px 0;
+            color: #555;
+        }
+    
+        /* Navigation arrows */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2.5em;
+            cursor: pointer;
+            color: #333;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .arrow:hover {
+            transform: translateY(-50%) scale(1.2);
+        }
+    
+        .arrow.left {
+            left: 20px;
+        }
+    
+        .arrow.right {
+            right: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <header>
+        <img src="images/Logo.png" alt="Football Index Logo">
+        <h1>2023–2024 Football Index</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="playoffs.html">2023-2024 Playoff</a>
+        <a href="awards.html">Awards</a>
+        <div class="dropdown">
+            <a href="#">Weekly Picks</a>
+            <div class="dropdown-content">
+                <a href="Week11.html">Week 11</a>
+                <a href="Week12.html">Week 12</a>
+                <a href="Week13.html">Week 13</a>
+                <a href="Week14.html">Week 14</a>
+                <a href="Week15.html">Week 15</a>
+                <a href="Week16.html">Week 16</a>
+                <a href="Week17.html">Week 17</a>
+                <a href="Week18.html">Week 18</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="slider">
+        <!-- MVP Slide -->
+        <div class="slide" id="mvp">
+            <h2>Most Valuable Player </h2>
+            <div class="details-container">
+                <div class="player-image">
+                    <img src="images/pat_mahomes.png" alt="MVP Winner">
+                </div>
+                <div class="details">
+                    <h3>Patrick Mahomes</h3>
+                    <p><strong>Team:</strong> Kansas City Chiefs</p>
+                    <p><strong>Passing Yards:</strong> 4,183</p>
+                    <p><strong>Touchdowns:</strong> 27 </p>
+                    <p><strong>Interceptions:</strong> 14</p>
+                    <p><strong>Completion Rate:</strong> 67.2%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Offensive Player of the Year Slide -->
+        <div class="slide" id="opy">
+            <h2>Offensive Player of the Year </h2>
+            <div class="details-container">
+                <div class="player-image">
+                    <img src="images/CMC.jpg" alt="OPY Winner">
+                </div>
+                <div class="details">
+                    <h3> Christian McCaffery</h3>
+                    <p><strong>Team:</strong> San Francisco 49ers</p>
+                    <p><strong>Total Yards:</strong> 2,023</p>
+                    <p><strong>Touchdowns:</strong> 21</p>
+                    <p><strong>Receptions:</strong> 67</p>
+                    <p><strong>Yards per Carry:</strong> 5.4</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Defensive Player of the Year Slide -->
+        <div class="slide" id="dpy">
+            <h2>Defensive Player of the Year</h2>
+            <div class="details-container">
+                <div class="player-image">
+                    <img src="images/myles.jpg" alt="DPY Winner">
+                </div>
+                <div class="details">
+                    <h3>Myles Garrett</h3>
+                    <p><strong>Team:</strong> Cleveland Browns</p>
+                    <p><strong>Sacks:</strong> 14</p>
+                    <p><strong>Tackles:</strong> 42</p>
+                    <p><strong>Forced Fumbles:</strong> 4</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <span class="arrow left" onclick="prevSlide()">&#10094;</span>
+        <span class="arrow right" onclick="nextSlide()">&#10095;</span>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+    
+        function showSlide(index) {
+            slides.forEach(slide => slide.style.display = 'none');
+            slides[index].style.display = 'flex';
+        }
+    
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+    
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+    
+        // Show the first slide initially
+        showSlide(currentSlide);
+    </script>
+
+</body>
+</html>
