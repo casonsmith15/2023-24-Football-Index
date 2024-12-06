@@ -83,10 +83,10 @@ nav a:hover {
 
 /* Main content styling */
 .main-image {
-        width: auto;
-        max-width: 90%;
-        height: 400px;
-        margin: 0 auto;
+        width: 80%;
+        max-width: 800px;
+        height: auto;
+        margin: 20px auto;
         display: block;
         object-fit: cover;
         border: 2px solid #ddd;
