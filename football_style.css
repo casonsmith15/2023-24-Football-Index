@@ -83,13 +83,15 @@ nav a:hover {
 
 /* Main content styling */
 .main-image {
-    width: 600%;
-    height: 400px;
-    margin: 0 auto;
-    display: block;
-    object-fit: cover;
-    border: 2px solid #ddd;
-    border-radius: 10px;
+        width: auto;
+        max-width: 90%;
+        height: 400px;
+        margin: 0 auto;
+        display: block;
+        object-fit: cover;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+    
 }
 
 .pagination {
