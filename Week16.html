@@ -5,6 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2023-2024 Football Index</title>
     <link rel="stylesheet" href="football_style.css"> <!-- Link to external CSS file -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.11.0/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("CRLnV0v6gissnQbQl"); 
+        })();
+        function sendEmail(event) {
+            event.preventDefault(); 
+            
+            const picks = Array.from(document.querySelectorAll("input[type='checkbox']:checked"))
+                .map(checkbox => checkbox.parentElement.textContent.trim())
+                .join("\n");
+
+            
+            const email = document.querySelector("input[name='email']").value;
+
+            // Validate email and picks
+            if (!email) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+            if (!picks) {
+                alert("Please select at least one pick.");
+                return;
+            }
+
+            // Send the email
+            emailjs.send("service_vd8nm8g", "template_v0utygc", {
+                user_email: email,
+                message: picks,
+            }).then(function(response) {
+                alert("Your week 16 picks have been submitted successfully!");
+            }, function(error) {
+                alert("Failed to send email. Please try again.");
+                console.error("Error:", error);
+            });
+        }
+    </script>
 </head>
 <body>
 
@@ -46,7 +83,7 @@
                     </tr>
                     <tr>
                         <td><label><input type="checkbox"> <img src="images/browns_logo.png" alt="Browns" width="20"> Browns</label></td>
-                        <td>at <label><input type="checkbox"> <img src="images/bengals_logo.png" alt="Bengals" width="20"> Bengals</label></td>
+                        <td>at <label><input type="checkbox"> <img src="images/bengals1_logo.png" alt="Bengals" width="20"> Bengals</label></td>
                         <td>8:15 pm</td>
                     </tr>
 
@@ -55,7 +92,7 @@
                     </tr>
                     <tr>
                         <td><label><input type="checkbox"> <img src="images/texans_logo.png" alt="Texans" width="20"> Texans</label></td>
-                        <td>at <label><input type="checkbox"> <img src="images/chiefs_logo.png" alt="Chiefs" width="20"> Chiefs</label></td>
+                        <td>at <label><input type="checkbox"> <img src="images/chiefs1_logo.png" alt="Chiefs" width="20"> Chiefs</label></td>
                         <td>1:00 pm</td>
                     </tr>
                     <tr>
@@ -74,7 +111,7 @@
                     </tr>
                     <tr>
                         <td><label><input type="checkbox"> <img src="images/patriots_logo.png" alt="Patriots" width="20"> Patriots</label></td>
-                        <td>at <label><input type="checkbox"> <img src="images/bills_logo.png" alt="Bills" width="20"> Bills</label></td>
+                        <td>at <label><input type="checkbox"> <img src="images/bills1_logo.png" alt="Bills" width="20"> Bills</label></td>
                         <td>1:00 pm</td>
                     </tr>
                     <tr>
@@ -113,7 +150,7 @@
                         <td>4:05 pm</td>
                     </tr>
                     <tr>
-                        <td><label><input type="checkbox"> <img src="images/jaguars_logo.png" alt="Jaguars" width="20"> Jaguars</label></td>
+                        <td><label><input type="checkbox"> <img src="images/jags_logo.png" alt="Jaguars" width="20"> Jaguars</label></td>
                         <td>at <label><input type="checkbox"> <img src="images/raiders_logo.png" alt="Raiders" width="20"> Raiders</label></td>
                         <td>4:25 pm</td>
                     </tr>
@@ -123,7 +160,7 @@
                         <td>4:25 pm</td>
                     </tr>
                     <tr>
-                        <td><label><input type="checkbox"> <img src="images/buccaneers_logo.png" alt="Buccaneers" width="20"> Buccaneers</label></td>
+                        <td><label><input type="checkbox"> <img src="images/bucs1_logo.png" alt="Buccaneers" width="20"> Buccaneers</label></td>
                         <td>at <label><input type="checkbox"> <img src="images/cowboys_logo.png" alt="Cowboys" width="20"> Cowboys</label></td>
                         <td>8:20 pm</td>
                     </tr>
@@ -141,7 +178,7 @@
 
             <!-- Email Submission -->
             <td width="30%" valign="top" align="center">
-                <form action="#" method="post">
+                <form onsubmit="sendEmail(event)">
                     <p><b>Enter email to submit results:</b></p>
                     <input type="email" name="email" placeholder="Enter your email to submit results" style="width: 80%; padding: 5px;">
                     <br><br>

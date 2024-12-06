@@ -5,6 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2023-2024 Football Index</title>
     <link rel="stylesheet" href="football_style.css"> <!-- Link to external CSS file -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.11.0/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("CRLnV0v6gissnQbQl"); 
+        })();
+        function sendEmail(event) {
+            event.preventDefault(); 
+            
+            const picks = Array.from(document.querySelectorAll("input[type='checkbox']:checked"))
+                .map(checkbox => checkbox.parentElement.textContent.trim())
+                .join("\n");
+
+            
+            const email = document.querySelector("input[name='email']").value;
+
+            // Validate email and picks
+            if (!email) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+            if (!picks) {
+                alert("Please select at least one pick.");
+                return;
+            }
+
+            // Send the email
+            emailjs.send("service_vd8nm8g", "template_v0utygc", {
+                user_email: email,
+                message: picks,
+            }).then(function(response) {
+                alert("Your week 12 picks have been submitted successfully!");
+            }, function(error) {
+                alert("Failed to send email. Please try again.");
+                console.error("Error:", error);
+            });
+        }
+    </script>
 </head>
 <body>
 
@@ -122,7 +159,7 @@
 
             <!-- Email Submission -->
             <td width="30%" valign="top" align="center">
-                <form action="#" method="post">
+                <form onsubmit="sendEmail(event)">
                     <p><b>Enter email to submit results:</b></p>
                     <input type="email" name="email" placeholder="Enter your email to submit results" style="width: 80%; padding: 5px;">
                     <br><br>

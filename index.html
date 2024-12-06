@@ -32,7 +32,7 @@
         </div>
     </nav>
 
-    <img id="mainImage" src="https://www.twincities.com/wp-content/uploads/2023/02/STP-L-VIKINGS-1217.jpg?w=525" alt="Football Player Image" class="main-image">
+    <img id="mainImage" src="images/herbert.jpg" alt="Football Player Image" class="main-image">
 
     <div class="pagination">
         <div class="active" onclick="showImage(0)"></div>
@@ -54,13 +54,13 @@
 
     <script>
         const images = [
-            'https://www.twincities.com/wp-content/uploads/2023/02/STP-L-VIKINGS-1217.jpg?w=525',
-            'https://i.ytimg.com/vi/kf6MTsQ4WfM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLABuKiNBqyeWIIaXn4nPkBn7xongg',
-            'https://www.kxan.com/wp-content/uploads/sites/40/2022/08/8ad0b8214b744b7d9ea215d5002f1cb4.jpg?w=2560&h=1440&crop=1',
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiotNYz0ZNqPTVzhV8Z5x9TjL6AhvR8Avs6A&s',
-            'https://athlonsports.com/.image/t_share/MjA5Nzg0MTYyNjc5MjY4ODE3/usatsi_22058392.jpg'
+            'images/herbert.jpg',
+            'images/henry.jpg',
+            'images/ps2.jpg',
+            'images/pat.jpg',
+            'images/xavier.jpg'
         ];
-
+        let currentIndex = 0;
         function showImage(index) {
             const mainImage = document.getElementById('mainImage');
             mainImage.src = images[index];
@@ -69,6 +69,13 @@
             dots.forEach(dot => dot.classList.remove('active'));
             dots[index].classList.add('active');
         }
+        function startSlideshow() {
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image after the last one
+            showImage(currentIndex);
+        }, 5000); // 3000ms = 3 seconds
+        }
+        window.onload = startSlideshow;
     </script>
 
 </body>
